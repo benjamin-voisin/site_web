@@ -48,9 +48,11 @@
   <h3>Contact</h3>
     
       <center>
-          <font color="blue">
-            benjamin[dot]voisin[at]ens-rennes[dot]fr
-          </font>
+                <a id="mel" title="pour m'envoyer un mail">
+                    <font color="blue">
+                        prenom.nom@ens-rennes.fr
+                    </font>
+                </a>
 			<br>
 			<div id = "contact" >
 				<div class = "contact_box">
@@ -67,4 +69,15 @@
   <br>
     
 </div>
+<script>
+  function mail() {
+    let a = "YmVuamFtaW4udm9pc2lu";
+    let b = "QGVucy1yZW5uZXMuZnI";
+    mel = atob(a+b);
+    meldiv = document.getElementById("mel");
+    meldiv.innerHTML = mel;
+    meldiv.href = atob("bWFpbHRvOg==") + mel;
+  }
+  mail();
+</script>
 </body>
