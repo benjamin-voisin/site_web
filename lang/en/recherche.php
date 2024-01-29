@@ -10,7 +10,7 @@
             'when'   => 'Septembre 2023 --',
         ],
         'stageL3' => [
-            'title'  => "Zero Knowledge Proof and eligibility verifiability in electronic voting"
+            'title'  => "Zero Knowledge Proof and eligibility verifiability in electronic voting",
             'people' => ['alexandredebant', 'luccahirschi'],
             'team'   => 'PESTO',
             'when'   => 'May -- July 2023',
