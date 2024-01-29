@@ -1,5 +1,18 @@
 <!-- header.php -->
 <!DOCTYPE html>
+<?php
+require_once('detectLanguage.php');
+$lang = detectLanguage();
+echo '<html lang="' . $lang . '">';
+?>
+<?php
+if ($lang === 'en') {
+    require_once('lang/en/header.php');
+} else {
+    require_once('lang/fr/header.php');
+}
+?>
+
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -23,24 +36,24 @@
         $default_attrs = 'style="text-decoration:none"'; 
         $categories = [
             'index' => [
-                'href'  => 'index.php',
+                'href'  => urlLanguage('index.php', $lang),
                 'attrs' => '',
-                'name'   => 'Accueil',
+                'name'   => $lang_index,
             ],
             'recherche' => [
-                'href'  => 'recherche.php',
+                'href'  => urlLanguage('recherche.php', $lang),
                 'attrs' => '',
-                'name'   => 'Recherche',
+                'name'   => $lang_research,
             ],
             'projets' => [
-                'href'  => 'projets.php',
+                'href'  => urlLanguage('projets.php', $lang),
                 'attrs' => '',
-                'name'   => 'Projets',
+                'name'   => $lang_projects,
             ],
             'wikipedia' => [
-                'href'  => 'wikipedia.php',
+                'href'  => urlLanguage('wikipedia.php', $lang),
                 'attrs' => '',
-                'name'   => 'Wikipédia',
+                'name'   => $lang_wikipedia,
             ],
         ];
         foreach ($categories as $category => $data) {
@@ -53,7 +66,13 @@
             echo '"';
             echo '>' . $data['name'] . '</a></li>';  
         }
-        ?>
+?>
+      <li class = deroulant>
+      <a style="text-decoration:none" href=# class="bouton1">Langue</a> 
+      <ul class = sous>
+        <li><a style="text-decoration:none" href = "?lang=en" class="bouton3">English</a></li>
+        <li><a style="text-decoration:none" href = "?lang=fr" class="bouton3">French</a></li>
+      </ul></li>
 
   </ul>
       </ul>
