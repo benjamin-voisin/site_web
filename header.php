@@ -77,4 +77,3 @@ if ($lang === 'en') {
   </ul>
       </ul>
     </nav>
-<div class="conteneur">
