@@ -20,13 +20,13 @@ if ($lang === 'en') {
     echo '<h4>' . $encadrement . ' ';
     foreach ($data['people'] as $peopleid) {
       $peopledata = $knownpeople[$peopleid];
-      echo '<a style="text-decoration:none" href="' . $peopledata['href'] . '">';
+      echo '<a style="text-decoration:none" target="_blank" href="' . $peopledata['href'] . '">';
       echo $peopledata['surname'] . ' ';
       echo '<span style="font-variant-caps:small-caps">' . $peopledata['name'] . '</span></a> ';
     }
     echo '</h4>';
     echo '<h5>';
-    echo '<a style="text-decoration:none" href="';
+    echo '<a style="text-decoration:none" target="_blank" href="';
     echo $knownteams[$data['team']]['href'];
     echo '">';
     echo $knownteams[$data['team']]['employer'] . ', ' . $knownteams[$data['team']]['teamname'] . ', ' . $knownteams[$data['team']]['lab'];
