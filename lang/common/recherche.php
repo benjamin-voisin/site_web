@@ -15,7 +15,7 @@ $knownpeople = [
         'name' => 'Debant',
         'href' => 'https://members.loria.fr/ADebant/',
     ],
-    'luccahirshi' => [
+    'luccahirschi' => [
         'surname' => 'Lucca',
         'name' => 'Hirshi',
         'href' => 'https://members.loria.fr/LHirschi/',
