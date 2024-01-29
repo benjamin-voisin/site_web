@@ -1,5 +1,5 @@
 <?php 
-    require_once('lang/common/research.php');
+    require_once('lang/common/recherche.php');
 
     $encadrement = 'With';
     $experiments = [
