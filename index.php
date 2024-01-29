@@ -5,16 +5,23 @@ $section = "index"; // Set the desired section
 // Include the header file
 require_once('header.php');
 ?>
+<?php
+if ($lang === 'en') {
+    require_once('lang/en/index.php');
+} else {
+    require_once('lang/fr/index.php');
+}
+?>
 
 <div class="conteneur">
   <h3><?php echo $lang_shortdesctipionname ?></h3>
 
-  <p> <?php echo $lang_shortdescription ?></p>
+  <p> <?php echo $lang_shortdesctipion ?></p>
 
 
       <hr>
       <h3>Curriculum vitae</h3>
-      <center><a style="text-decoration:none" href="cv/CV_français.pdf" class="bouton1" target="_blank">CV</a></center>
+      <center><a style="text-decoration:none" href=<?php $lang_cv_link ?> class="bouton1" target="_blank">CV</a></center>
       
   <hr>
   
