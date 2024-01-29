@@ -68,7 +68,7 @@ if ($lang === 'en') {
         }
 ?>
       <li class = deroulant>
-      <a style="text-decoration:none" href=# class="bouton1">Langue</a> 
+      <a style="text-decoration:none" href=# class="bouton1">Langage</a> 
       <ul class = sous>
         <li><a style="text-decoration:none" href = "?lang=en" class="bouton3">English</a></li>
         <li><a style="text-decoration:none" href = "?lang=fr" class="bouton3">Français</a></li>
