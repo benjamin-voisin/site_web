@@ -7,9 +7,9 @@ require_once('header.php');
 ?>
 
 <div class="conteneur">
-  <h3>Présentation </h3>
+  <h3><?php echo $lang_shortdesctipionname ?></h3>
 
-      <p> Bienvenu sur ma page personnelle ! Je suis actuellement étudiant en deuxième année (M1 SIF) à l’ENS de Rennes.</p>
+  <p> <?php echo $lang_shortdescription ?></p>
 
 
       <hr>

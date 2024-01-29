@@ -71,7 +71,7 @@ if ($lang === 'en') {
       <a style="text-decoration:none" href=# class="bouton1">Langue</a> 
       <ul class = sous>
         <li><a style="text-decoration:none" href = "?lang=en" class="bouton3">English</a></li>
-        <li><a style="text-decoration:none" href = "?lang=fr" class="bouton3">French</a></li>
+        <li><a style="text-decoration:none" href = "?lang=fr" class="bouton3">Français</a></li>
       </ul></li>
 
   </ul>
