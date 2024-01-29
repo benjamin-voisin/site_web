@@ -74,7 +74,6 @@ if ($lang === 'en') {
         <li><a style="text-decoration:none" href = "?lang=fr" class="bouton3">Français</a></li>
       </ul></li>
 
-  </ul>
       </ul>
     </nav>
 <div class="conteneur">
