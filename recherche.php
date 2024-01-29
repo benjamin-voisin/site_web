@@ -1,7 +1,7 @@
 <!-- recherche.php -->
 <?php
 // Set the variable before including the header
-$section = "index"; // Set the desired section
+$section = "recherche"; // Set the desired section
 // Include the header file
 require_once('header.php');
 ?>

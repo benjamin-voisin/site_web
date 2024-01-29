@@ -27,7 +27,7 @@
                 'attrs' => '',
                 'name'   => 'Accueil',
             ],
-            'research' => [
+            'rechearche' => [
                 'href'  => 'recherche.php',
                 'attrs' => '',
                 'name'   => 'Recherche',
@@ -35,12 +35,12 @@
             'projects' => [
                 'href'  => 'projets.php',
                 'attrs' => '',
-                'name'   => 'Enseignement',
+                'name'   => 'Projets',
             ],
             'wikipedia' => [
                 'href'  => 'wikipedia.php',
                 'attrs' => '',
-                'name'   => 'Contact',
+                'name'   => 'Wikipédia',
             ],
         ];
         foreach ($categories as $category => $data) {

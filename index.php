@@ -15,11 +15,6 @@ require_once('header.php');
       <hr>
       <h3>Curriculum vitae</h3>
       <center><a style="text-decoration:none" href="cv/CV_français.pdf" class="bouton1" target="_blank">CV</a></center>
-    
-      
-  
-  
-  
       
   <hr>
   
