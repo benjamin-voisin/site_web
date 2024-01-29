@@ -27,12 +27,12 @@
                 'attrs' => '',
                 'name'   => 'Accueil',
             ],
-            'rechearche' => [
+            'recherche' => [
                 'href'  => 'recherche.php',
                 'attrs' => '',
                 'name'   => 'Recherche',
             ],
-            'projects' => [
+            'projets' => [
                 'href'  => 'projets.php',
                 'attrs' => '',
                 'name'   => 'Projets',
