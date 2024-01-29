@@ -21,7 +21,7 @@ if ($lang === 'en') {
 
       <hr>
       <h3>Curriculum vitae</h3>
-      <center><a style="text-decoration:none" href=<?php $lang_cv_link ?> class="bouton1" target="_blank">CV</a></center>
+      <center><a style="text-decoration:none" href=<?php echo $lang_cv_link ?> class="bouton1" target="_blank">CV</a></center>
       
   <hr>
   
