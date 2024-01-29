@@ -1,36 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" href="style.css" />
-    <title>Benjamin Voisin</title>
-  </head>
+<!-- index.php -->
+<?php
+// Set the variable before including the header
+$section = "index"; // Set the desired section
+// Include the header file
+require_once('header.php');
+?>
 
-<body>
-    <div id = "titre">
-      <div id = "boite">
-              <div id = "boitenom">
-                <div id="nom">
-                  Benjamin <span style="font-variant-caps:small-caps"> Voisin</span>
-                </div>
-              </div>
-      </div>
-    </div>
-    <nav>
-      <ul>
-        <li><a style="text-decoration:none" href="index.html" class="bouton2">Accueil</a></li>
-        <li><a style="text-decoration:none" href="recherche.html" class="bouton1">Recherche</a></li>
-        <li><a style="text-decoration:none" href="projets.html" class="bouton1">Projets</a></li>
-		<li><a style="text-decoration:none" href="wikipedia.html" class="bouton1">Wikipédia</a></li>
-    
-
-  </ul>
-      </ul>
-    </nav>
 <div class="conteneur">
-
-  
-    
   <h3>Présentation </h3>
 
       <p> Bienvenu sur ma page personnelle ! Je suis actuellement étudiant en deuxième année (M1 SIF) à l’ENS de Rennes.</p>

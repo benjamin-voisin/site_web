@@ -1,36 +1,13 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" href="style.css" />
-    <title>Benjamin Voisin</title>
-  </head>
+<!-- wikipedia.php -->
+<?php
+// Set the variable before including the header
+$section = "index"; // Set the desired section
+// Include the header file
+require_once('header.php');
+?>
 
-<body>
-    <div id = "titre">
-      <div id = "boite">
-              <div id = "boitenom">
-                <div id="nom">
-                  Benjamin <span style="font-variant-caps:small-caps"> Voisin</span>
-                </div>
-              </div>
-      </div>
-    </div>
-    <nav>
-      <ul>
-        <li><a style="text-decoration:none" href="index.html" class="bouton1">Accueil</a></li>
-        <li><a style="text-decoration:none" href="recherche.html" class="bouton1">Recherche</a></li>
-		<li><a style="text-decoration:none" href="projets.html" class="bouton1">Projets</a></li>
-		<li><a style="text-decoration:none" href="wikipedia.html" class="bouton2">Wikipédia</a></li>
-    
-    <li class = deroulant>
-
-  </ul>
-      </ul>
-    </nav>
 <div class="conteneur">
 
-  
 	Depuis 2017, je contribue (plus ou moins) régulièrement à la plateforme Wikipédia. En plus de contributions "de maintenance" très générales, et de créations sur des sujets extrêmement varié, je profite aussi de mes compétences en programmation pour coder des modules facilite l’édition en générale de wikipédia.
 
 	<h3>Modèle de Pseudo-Code</h3>
