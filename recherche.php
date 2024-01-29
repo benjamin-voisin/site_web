@@ -14,9 +14,25 @@ if ($lang === 'en') {
 ?>
 
 <div class="conteneur">
-  <?php 
+<?php 
   foreach ($experiments as $experiment => $data) {
     echo '<h3>' . $data['title'] . '</h3>';
+    echo '<h4>' . $encadrement . ' ';
+    foreach ($data['people'] as $peopleid) {
+      $peopledata = $knownpeople[$peopleid];
+      echo '<a style="text-decoration:none" href="' . $peopledata['href'] . '">';
+      echo $peopledata['surname'] . ' ';
+      echo '<span style="font-variant-caps:small-caps">' . $peopledata['name'] . '</span></a> ';
+    }
+    echo '</h4>';
+    echo '<h5>';
+    echo '<a style="text-decoration:none" href="';
+    echo $knownteams[$data['team']]['href'];
+    echo '">';
+    echo $knownteams[$data['team']]['employer'] . ', ' . $knownteams[$data['team']]['teamname'] . ', ' . $knownteams[$data['team']]['lab'];
+    echo '</a></h5>';
+    echo '<h6>' . $data['when'] . '</h6>';
+    echo '<hr>';
   }
   ?>
    
