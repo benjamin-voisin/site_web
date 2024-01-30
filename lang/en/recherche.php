@@ -14,6 +14,16 @@
             'people' => ['alexandredebant', 'luccahirschi'],
             'team'   => 'PESTO',
             'when'   => 'May -- July 2023',
+            'ressources' => [
+              'rapport' => [
+                'name' => 'Rapport',
+                'link' => 'rapport_stage_L3.pdf',
+              ],
+              'beamer' => [
+                'name' => 'Slides',
+                'link' => 'Présentation_stage_L3.pdf',
+              ],
+            ],
         ],
     ];
 ?>
