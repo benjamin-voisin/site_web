@@ -8,6 +8,12 @@
             'people' => ['davidbaelde', 'josephlallemand'],
             'team'   => 'SPICY',
             'when'   => 'Septembre 2023 --',
+            'ressources' => [
+              'git' => [
+                'name' => 'git repository',
+                'link' => 'https://github.com/squirrel-prover/squirrel-prover',
+              ],
+            ],
         ],
         'stageL3' => [
             'title'  => "Zero Knowledge Proof and eligibility verifiability in electronic voting",

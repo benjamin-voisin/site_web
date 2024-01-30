@@ -8,6 +8,12 @@
             'people' => ['davidbaelde', 'josephlallemand'],
             'team'   => 'SPICY',
             'when'   => 'Septembre 2023 --',
+            'ressources' => [
+              'git' => [
+                'name' => 'Répo git',
+                'link' => 'https://github.com/squirrel-prover/squirrel-prover',
+              ],
+            ],
         ],
         'stageL3' => [
             'title'  => "Preuve à divulgation nulle de connaissance pour la vérification d’éligibilité dans le vote par internet",
