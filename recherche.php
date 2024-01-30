@@ -17,6 +17,7 @@ if ($lang === 'en') {
 <?php 
   foreach ($experiments as $experiment => $data) {
     echo '<h3>' . $data['title'] . '</h3>';
+    echo $data['description'];
     echo '<h4>' . $encadrement . ' ';
     foreach ($data['people'] as $peopleid) {
       $peopledata = $knownpeople[$peopleid];
