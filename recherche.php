@@ -22,7 +22,7 @@ if ($lang === 'en') {
       $peopledata = $knownpeople[$peopleid];
       echo '<a style="text-decoration:none" target="_blank" href="' . $peopledata['href'] . '">';
       echo $peopledata['surname'] . ' ';
-      echo '<span style="font-variant-caps:small-caps">' . $peopledata['name'] . '</span></a> ';
+      echo '<span style="font-variant-caps:small-caps">' . $peopledata['name'] . '</span></a>, ';
     }
     echo '</h4>';
     echo '<h5>';
