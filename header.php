@@ -50,10 +50,15 @@ if ($lang === 'en') {
                 'attrs' => '',
                 'name'   => $lang_projects,
             ],
-            'wikipedia' => [
-                'href'  => urlLanguage('wikipedia.php', $lang),
+            /* 'wikipedia' => [ */
+            /*     'href'  => urlLanguage('wikipedia.php', $lang), */
+            /*     'attrs' => '', */
+            /*     'name'   => $lang_wikipedia, */
+            /* ], */
+            'contact' => [
+                'href' => urlLanguage('contact.php', $lang),
                 'attrs' => '',
-                'name'   => $lang_wikipedia,
+                'name' => 'Contact',
             ],
         ];
         foreach ($categories as $category => $data) {
