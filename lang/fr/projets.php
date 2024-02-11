@@ -27,7 +27,7 @@
       ],
       'powernuts' => [
         'title' => 'PowerNuts',
-        'description' => "Un plugin Neovim pour pouvoir utiliser l'assistant de preuve Squirrel."
+        'description' => "Un plugin Neovim pour pouvoir utiliser l'assistant de preuve Squirrel.",
         'ressources' => [
           'git' => [
             'name' => 'Répo git',

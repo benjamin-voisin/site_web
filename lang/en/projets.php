@@ -27,7 +27,7 @@
       ],
       'powernuts' => [
         'title' => 'PowerNuts',
-        'description' => "A neovim plugin for the Squirrel proof-assistant"
+        'description' => "A neovim plugin for the Squirrel proof-assistant",
         'ressources' => [
           'git' => [
             'name' => 'git repository',
