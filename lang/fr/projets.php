@@ -18,7 +18,7 @@
       'olagem' => [
         'title' => 'Olagem',
         'description' => "Un test de vitesse d'écriture, écrit en Rust",
-        'ressources' =[
+        'ressources' => [
           'git' => [
             'name' => 'Répo git',
             'link' => 'https://github.com/benjamin-voisin/olagem/',
