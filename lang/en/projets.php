@@ -3,7 +3,7 @@
     $experiments = [
       'box' => [
         'title' => 'Box',
-        'description' => "A fast C algorithm to compute MAWs (minimal absent words)",
+        'description' => "A fast C algorithm to compute MAWs (minimal absent words).",
         'ressources' => [
           'git' => [
             'name' => 'git repository',
@@ -17,7 +17,7 @@
       ],
       'olagem' => [
         'title' => 'Olagem',
-        'description' => "A typing-speed test written in Rust",
+        'description' => "A typing-speed test written in Rust.",
         'ressources' => [
           'git' => [
             'name' => 'git repository',
@@ -27,7 +27,7 @@
       ],
       'powernuts' => [
         'title' => 'PowerNuts',
-        'description' => "A neovim plugin for the Squirrel proof-assistant",
+        'description' => "A neovim plugin for the Squirrel proof-assistant.",
         'ressources' => [
           'git' => [
             'name' => 'git repository',

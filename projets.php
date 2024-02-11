@@ -19,6 +19,7 @@ if ($lang === 'en') {
     echo '<h3>' . $data['title'] . '</h3>';
     echo $data['description'];
 
+	echo '</br>';
     foreach ($data['ressources'] as $res) {
       echo '<a href="' . $res['link'] . '" target="_blank">' . $res['name'] . '</a>. ';
     }

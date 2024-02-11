@@ -3,7 +3,7 @@
     $experiments = [
       'box' => [
         'title' => 'Box',
-        'description' => "Un outil pour calculer rapidement des mots absents minimaux",
+        'description' => "Un outil pour calculer rapidement des mots absents minimaux.",
         'ressources' => [
           'git' => [
             'name' => 'Répo git',
@@ -17,7 +17,7 @@
       ],
       'olagem' => [
         'title' => 'Olagem',
-        'description' => "Un test de vitesse d'écriture, écrit en Rust",
+        'description' => "Un test de vitesse d'écriture, écrit en Rust.",
         'ressources' => [
           'git' => [
             'name' => 'Répo git',
@@ -37,7 +37,7 @@
       ],
       'cehavl' => [
         'title' => 'Cehavl.nvim',
-        'description' => "Cehavl est un plugin Neovim permettant de mélanger l'ordre des lettres dans un mot. Par exemple, \"cheval\" peut devenir \"cehavl\" ou \"haevcl\"",
+        'description' => "Cehavl est un plugin Neovim permettant de mélanger l'ordre des lettres dans un mot. Par exemple, \"cheval\" peut devenir \"cehavl\" ou \"haevcl\".",
         'ressources' => [
           'git' => [
             'name' => 'Répo git',
