@@ -34,7 +34,7 @@ if ($lang === 'en') {
     echo '</a></h5>';
     echo '<h6>' . $data['when'] . '</h6>';
     foreach ($data['ressources'] as $res) {
-      echo '<a href="' . $res['link'] . '" target="_blank">' . $res['name'] . '</a>.';
+      echo '<a href="' . $res['link'] . '" target="_blank">' . $res['name'] . '</a>. ';
     }
     echo '<hr>';
   }

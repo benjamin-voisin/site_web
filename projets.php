@@ -20,7 +20,7 @@ if ($lang === 'en') {
     echo $data['description'];
 
     foreach ($data['ressources'] as $res) {
-      echo '<a href="' . $res['link'] . '" target="_blank">' . $res['name'] . '</a>.';
+      echo '<a href="' . $res['link'] . '" target="_blank">' . $res['name'] . '</a>. ';
     }
     echo '<hr>';
   }

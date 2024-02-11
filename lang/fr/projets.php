@@ -4,7 +4,7 @@
       'box' => [
         'title' => 'Box',
         'description' => "Un outil pour calculer rapidement des mots absents minimaux",
-        'ressources' =[
+        'ressources' => [
           'git' => [
             'name' => 'Répo git',
             'link' => 'https://framagit.org/AlexisHamon/box_project',

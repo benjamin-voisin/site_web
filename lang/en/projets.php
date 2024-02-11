@@ -4,7 +4,7 @@
       'box' => [
         'title' => 'Box',
         'description' => "A fast C algorithm to compute MAWs (minimal absent words)",
-        'ressources' =[
+        'ressources' => [
           'git' => [
             'name' => 'git repository',
             'link' => 'https://framagit.org/AlexisHamon/box_project',
