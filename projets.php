@@ -16,7 +16,7 @@ if ($lang === 'en') {
 <div class="conteneur">
 <?php
   foreach ($experiments as $experiment => $data) {
-    echo '<h3>' . $data['title'] ' </h3>';
+    echo '<h3>' . $data['title'] . '</h3>';
     echo $data['description'];
 
     foreach ($data['ressources'] as $res) {
