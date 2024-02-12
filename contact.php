@@ -18,12 +18,10 @@ if ($lang === 'en') {
 
 
     <center>
-                <a id="mel" title="to send me an email">
-                    <font color="blue">
-                        prenom.nom@ens-rennes.fr
-                    </font>
-                </a>
 			<br>
+			<hr>
+			<br>
+
 			<div id = "contact" >
 				<div class = "contact_box">
 					<a href ="https://github.com/benjamin-voisin" target="_blank"><img src="logo github.png" alt="Compte GitHub : Vneb23" height="50px" width="50px"></a>
