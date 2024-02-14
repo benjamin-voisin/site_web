@@ -13,6 +13,10 @@
             'name' => 'Rapport',
             'link' => 'docs/Scientific_report.pdf',
           ],
+          'wasm' => [
+            'name' => 'Try it online !',
+            'link' => urlLanguage('box.php', $lang),
+          ],
         ],
       ],
       'olagem' => [
