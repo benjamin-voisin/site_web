@@ -315,3 +315,63 @@ width:100%;
 
 		    }
 
+      div.scroll {
+        position: relative;
+        background-color: #ffffff;
+        width: 600px;
+        height: 400px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        text-align: left;
+        padding: 20px;
+      }
+
+      .copyBtn {
+        position: sticky;
+        top: 0px;
+        left: 470px;
+        background-color: #ffffff;
+        border: 1px solid #ccc;
+        padding: 5px 10px;
+        cursor: pointer;
+        text-align: right;
+        z-index: 1;
+      }
+
+      .flex-container {
+      display: flex;
+      }
+
+      .flex-child {
+      flex: 1;
+      }  
+
+      .flex-child:first-child {
+      margin-right: 20px;
+      } 
+
+      /* The alert message box */
+      .alert {
+      padding: 20px;
+      background-color: #f44336; /* Red */
+      color: white;
+      margin-bottom: 15px;
+      }
+
+      /* The close button */
+      .closebtn {
+      margin-left: 15px;
+      color: white;
+      font-weight: bold;
+      float: right;
+      font-size: 22px;
+      line-height: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+      }
+
+      /* When moving the mouse over the close button */
+      .closebtn:hover {
+      color: black;
+      } 
+
