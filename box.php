@@ -17,17 +17,16 @@ if ($lang === 'en') {
 
       <span style="position: relative; float: left;">
 
+    <?php echo '<a style="text-decoration:none" href="' . urlLanguage('projets.php', $lang) . '" class="bouton1">' . $previous . '</a>'; ?>
+
         <div class="alert">
           <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
           <span>&#9888;</span> 
-          <?php echo $waring ?>
+          <?php echo $warning ?>
         </div> 
 
-    <?php echo '<a style="text-decoration:none" href="' . urlLanguage('projets.php', $lang) . '" class="bouton1">' . $previous . '</a>'; ?>
       </span>
-  <br>
-  <br>
-  <br>
+  <hr>
 <h3><?php echo $input ?></h3>
         <?php echo '<input type="text" id="input" placeholder="' . $input_text . '">'; ?>
         <button id="btn"><?php echo $button_text ?></button>
