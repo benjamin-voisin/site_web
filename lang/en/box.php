@@ -8,4 +8,6 @@
   $maw_title = 'Minimal Absent Words';
   $copy = 'Copy to clipboard';
   $dot_title = 'Suffix tree (in .dot format)';
+  $print_graph = 'Show the Suffix Tree';
+  $download_svg = 'Download the SVG';
 ?>

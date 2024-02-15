@@ -57,27 +57,82 @@ if ($lang === 'en') {
           </div>
         </div>
 
-        <div id="output"></div>
-        <script src="box.js"></script>
+        <button id="graphbtn" style="display:none">
+          <?php echo $print_graph ?>
+        </button>
+        <center>
+          <div class="svg">
+            <a id="downloadsvg" class="svgBtn" style="display:none" download>
+              <?php echo $download_svg ?>
+            </a>
+            <div id="suffixsvg">
+            </div>
+          </div>
+        </center>
+
+
+
+<script src="box.js"></script>
 <script>
+var svg;
+var dotString = "";
+
+function vizLoaded() {
+  graphbtn.addEventListener('click', function () {
+    document.getElementById("suffixsvg").innerHTML = "";
+    document.getElementById("downloadsvg").style.display="inline";
+
+    Viz.instance().then(function(viz) {
+      svg = viz.renderSVGElement(dotString);
+      document.getElementById("suffixsvg").appendChild(svg);
+      //get svg source.
+      var serializer = new XMLSerializer();
+      var source = serializer.serializeToString(svg);
+
+      //add name spaces.
+      if(!source.match(/^<svg[^>]+xmlns="http\:\/\/www\.w3\.org\/2000\/svg"/)){
+        source = source.replace(/^<svg/, '<svg xmlns="http://www.w3.org/2000/svg"');
+      }
+      if(!source.match(/^<svg[^>]+"http\:\/\/www\.w3\.org\/1999\/xlink"/)){
+        source = source.replace(/^<svg/, '<svg xmlns:xlink="http://www.w3.org/1999/xlink"');
+      }
+
+      //add xml declaration
+      source = '<?xml version="1.0" standalone="no"?>\r\n' + source;
+
+      //convert svg source to URI data scheme.
+      var url = "data:image/svg+xml;charset=utf-8,"+encodeURIComponent(source);
+
+      //set url value to a element's href attribute.
+      document.getElementById("downloadsvg").href = url;
+      //you can download svg file by right click menu.
+
+    });
+
+  });
+};
+
+
 const btn = document.getElementById("btn");
 const copyAwBtn = document.getElementById("copyAw");
 const copyDotBtn = document.getElementById("copyDot");
+<!-- const svgBtn = document.getElementById("savesvg"); -->
 
-btn.addEventListener('click', function () {
-  var dna = document.getElementById("input").value;
-  awoutput = document.getElementById("awoutput");
-  dotoutput = document.getElementById("dotoutput");
-  ptr = stringToNewUTF8(dna);
-  arbre = _buildST(ptr);
-  absentWords = _computeAbsentWords(arbre);
+  btn.addEventListener('click', function () {
+    var dna = document.getElementById("input").value;
+    awoutput = document.getElementById("awoutput");
+    dotoutput = document.getElementById("dotoutput");
+    ptr = stringToNewUTF8(dna);
+    arbre = _buildST(ptr);
+    absentWords = _computeAbsentWords(arbre);
 
-  dot = _computeDOT(arbre);
-  dotString = UTF8ToString(dot);
-  absentWordString = UTF8ToString(absentWords);
-  awoutput.innerHTML = absentWordString;
-  dotoutput.innerHTML = dotString;
-});
+    dot = _computeDOT(arbre);
+    dotString = UTF8ToString(dot);
+    absentWordString = UTF8ToString(absentWords);
+    awoutput.innerHTML = absentWordString;
+    dotoutput.innerHTML = dotString;
+    document.getElementById("graphbtn").style.display = "inline";
+  });
 
 copyAwBtn.addEventListener('click', function () {
   copyToClipboard("awoutput", copyAwBtn);
@@ -106,6 +161,7 @@ function copyToClipboard(elementId, button) {
     });
 }
 </script>
+<script src="https://unpkg.com/@viz-js/viz@latest" onload="vizLoaded()"></script>
 
         <hr>
 </div>

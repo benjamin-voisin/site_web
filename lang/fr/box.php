@@ -8,4 +8,6 @@
   $maw_title = 'Mots Absents Minimaux';
   $copy = 'Copier dans le presse-papier';
   $dot_title = 'Arbre des suffixes (au format .dot)';
+  $print_graph = "Affichez l'arbre des suffixes";
+  $download_svg = 'Télécharger le SVG';
 ?>
