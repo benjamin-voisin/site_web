@@ -8,14 +8,17 @@
           'git' => [
             'name' => 'Répo git',
             'link' => 'https://framagit.org/AlexisHamon/box_project',
+			'attributes' => 'target="_blank"',
           ],
           'paper' => [
             'name' => 'Rapport',
             'link' => 'docs/Scientific_report.pdf',
+			'attributes' => 'target="_blank"',
           ],
           'wasm' => [
             'name' => 'Try it online !',
             'link' => urlLanguage('box.php', $lang),
+			'attributes' => '',
           ],
         ],
       ],
@@ -26,6 +29,7 @@
           'git' => [
             'name' => 'Répo git',
             'link' => 'https://github.com/benjamin-voisin/olagem/',
+			'attributes' => 'target="_blank"',
           ],
         ],
       ],
@@ -36,6 +40,7 @@
           'git' => [
             'name' => 'Répo git',
             'link' => 'https://github.com/benjamin-voisin/PowerNuts/',
+			'attributes' => 'target="_blank"',
           ],
         ],
       ],
@@ -46,6 +51,7 @@
           'git' => [
             'name' => 'Répo git',
             'link' => 'https://github.com/benjamin-voisin/cehavl.nvim',
+			'attributes' => 'target="_blank"',
           ],
         ],
       ],
