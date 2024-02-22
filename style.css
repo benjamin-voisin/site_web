@@ -318,7 +318,7 @@ width:100%;
       div.scroll {
         position: relative;
         background-color: #ffffff;
-        width: 600px;
+        width: 90%;
         height: 400px;
         overflow-x: hidden;
         overflow-y: auto;
@@ -328,7 +328,7 @@ width:100%;
       .svg {
         position: center;
         background-color:var(--couleur-medium);
-        width: 1500px;
+        width: 90%;
         height: 500px;
         overflow-x: auto;
         overflow-y: auto;

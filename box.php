@@ -15,7 +15,7 @@ if ($lang === 'en') {
 
 <div class="conteneur">
 
-      <span style="position: relative; float: left;">
+      <span style="position: relative; float: center;">
 
     <?php echo '<a style="text-decoration:none" href="' . urlLanguage('projets.php', $lang) . '" class="bouton1">' . $previous . '</a>'; ?>
 
