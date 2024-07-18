@@ -161,7 +161,7 @@ function copyToClipboard(elementId, button) {
     });
 }
 </script>
-<script src="https://unpkg.com/@viz-js/viz@latest" onload="vizLoaded()"></script>
+<script src="https://unpkg.com/@viz-js/viz@3.7.0/lib/viz-standalone.js" integrity="sha256-AIIT7SWRaKLl666R065PK30ipOx+fiiLPIFnDC713Fk=" crossorigin="anonymous" onload="vizLoaded()"></script>
 
         <hr>
 </div>
