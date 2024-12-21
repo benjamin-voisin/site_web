@@ -1,14 +1,13 @@
-#import "@preview/modern-cv:0.1.0": *
+#import "./modern-cv-0.4.0/lib.typ" : resume, resume-entry, resume-item
 
 #show: resume.with(
   author: (
-      firstname: "John", 
-      lastname: "Smith",
-      email: "js@example.com", 
-      phone: "(+1) 111-111-1111",
-      github: "DeveloperPaul123",
-      linkedin: "Example",
-      address: "111 Example St. Example City, EX 11111",
+      firstname: "Benjamin", 
+      lastname: "Voisin",
+      email: "benjamin.voisin@ens-rennes.fr", 
+      phone: "(+33) 6 52 67 61 61",
+      github: "benjamin-voisin",
+      address: "10 rue François Elleviou, 35000 Rennes",
       positions: (
         "Software Engineer",
         "Software Architect"
@@ -16,6 +15,8 @@
   ),
   date: datetime.today().display()
 )
+
+= Rsearch
 
 = Education
 
@@ -32,3 +33,7 @@
   - #lorem(25)  
 ]
 
+= Experiences
+
+
+= Associative Life
