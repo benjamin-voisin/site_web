@@ -12,7 +12,7 @@ local function compile_source(source)
 			io.stderr:write("Could not open result file\n")
 			os.exit(1)
 		end
-		target:write(F.content(base_langage))
+		target:write(F:content(base_langage))
 		target:close()
 		for _, langue in pairs(other_langages) do
 			os.execute(string.format("mkdir -p ./public/%s", langue))
@@ -21,7 +21,7 @@ local function compile_source(source)
 				io.stderr:write("Could not open result file\n")
 				os.exit(1)
 			end
-			target:write(F.content(langue))
+			target:write(F:content(langue))
 			target:close()
 		end
 	else
@@ -30,10 +30,7 @@ local function compile_source(source)
 	end
 end
 
-if (arg[1]) then
-	compile_source(arg[1])
-else
-	io.stderr:write("You must specify the file to compile\n")
-	os.exit(1)
+local sources = { "index", "recherche/index", "recherche/stagel3", "recherche/projetM1" }
+for _, source in pairs(sources) do
+	compile_source(source)
 end
-

@@ -2,7 +2,7 @@ local Base = require("base")
 
 return {
 	build = true,
-	content = function(lang)
-		return Base.base(lang, "INDEX")
+	content = function(self, lang)
+		return Base.base(lang, "INDEX", "Acceuil")
 	end
 }
