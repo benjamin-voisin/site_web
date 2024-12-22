@@ -4,6 +4,6 @@ return {
 	lien = "projets/index.html",
 	content = function(self, langue)
 		local content = "Projets..."
-		return Base.base(langue, content, "Projets", "../style.css")
+		return Base.base(langue, content, "Projets", "../style.css", 1)
 	end
 }

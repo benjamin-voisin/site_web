@@ -4,6 +4,7 @@
 	--couleurfonce:#303030;
 	--couleurmedium:#B0D8E8;
 	--couleurpale:#E2E2E2;
+	--couleurhighlight:#3e02cd;
 }
 
 body 
@@ -15,12 +16,13 @@ body
 
 .container
 {
-	min-width: 818px;
-	width:60%;
+	width:50%;
 	text-align:justify;
 	margin-left:auto; 
 	margin-right:auto; 
 	padding:10px 10px 10px 10px;
+	padding-top: 50px;
+	height:80%;
 	background-color: var(--couleurpale);
 	overflow: auto;
 }
@@ -33,13 +35,10 @@ body
 
 nav
 {
-	min-width:820px;
 	text-align:right;
-	width: 100%;
-	margin: 0px auto 0px auto;
+	/* margin: auto auto auto auto; */
 	background-color: var(--couleurpale);
 	position: sticky;
-	padding-left : 0;
 	padding-right : 0;
 	padding-top : 5px;
 	padding-bottom : 5px;
@@ -146,8 +145,7 @@ a.bouton1
 }
 a.bouton1:hover 
 {
-	color: var(--couleurfonce);
-	color: red;
+	color: var(--couleurhighlight); 
 }
 
 /*bouton quand on est sur la page*/
@@ -156,7 +154,7 @@ a.bouton2
 	padding: 10px 15px; 
 	margin: 3px 3px 3px 3px;
 	display: inline-block;
-	color: red; 
+	color: var(--couleurhighlight); 
 	font-weight: bold;
 	font-size: 18px;
 	border-radius: 18px;
@@ -334,27 +332,25 @@ div.scroll {
 	color: black;
 } 
 
-/* For the font */
-/* .b612-regular { */
-/*   font-family: "B612", serif; */
-/*   font-weight: 400; */
-/*   font-style: normal; */
-/* } */
+#footer {
+    /* height: 40px; */ 
+    position: fixed; 
+    bottom:0%;
+    width:50%;
+}
+#contact
+{
+	/* height:50px; */
+	width:50%;
+	display:flex;
+	justify-content: center;
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
 
-/* .b612-bold { */
-/*   font-family: "B612", serif; */
-/*   font-weight: 700; */
-/*   font-style: normal; */
-/* } */
-
-/* .b612-regular-italic { */
-/*   font-family: "B612", serif; */
-/*   font-weight: 400; */
-/*   font-style: italic; */
-/* } */
-
-/* .b612-bold-italic { */
-/*   font-family: "B612", serif; */
-/*   font-weight: 700; */
-/*   font-style: italic; */
-/* } */
+.contact_box
+{
+	padding-left : 10px;
+	padding-right : 10px;
+}

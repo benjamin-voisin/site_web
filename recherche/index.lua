@@ -29,6 +29,6 @@ return {
 		for _, recherche in pairs(recherches) do
 			content = content .. format_experience_recherche(require(recherche), langue)
 		end
-		return Base.base(langue, content, "Recherche", "../style.css")
+		return Base.base(langue, content, "Recherche", "../style.css", 1)
 	end
 }

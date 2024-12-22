@@ -1,13 +1,31 @@
 #! /bin/lua
 
+local base_langage = "en"
+local other_langages = { "fr" }
+
+local function copy_style()
+	os.execute(string.format("mkdir -p ./public/"))
+	os.execute(string.format("cp ./style.css ./public/"))
+	for _, langue in pairs(other_langages) do
+		os.execute(string.format("mkdir -p ./public/%s", langue))
+		os.execute(string.format("cp ./style.css ./public/%s", langue))
+	end
+end
+
+local function copy_media()
+	os.execute(string.format("mkdir -p ./public/media"))
+	os.execute(string.format("cp ./media/* ./public/media/"))
+	for _, langue in pairs(other_langages) do
+		os.execute(string.format("mkdir -p ./public/%s/media", langue))
+		os.execute(string.format("cp ./media/* ./public/%s/media/", langue))
+	end
+end
+
 local function compile_source(source)
-	local base_langage = "en"
-	local other_langages = { "fr" }
 
 	local F = require(source.require_path)
 	if (F.build) then
 		os.execute(string.format("mkdir -p ./public/%s", source.directory))
-		os.execute(string.format("cp ./style.css ./public/"))
 		local target = io.open(string.format("./public/%s.html", source.require_path), "w")
 		if (not target) then
 			io.stderr:write("Could not open result file\n")
@@ -17,7 +35,6 @@ local function compile_source(source)
 		target:close()
 		for _, langue in pairs(other_langages) do
 			os.execute(string.format("mkdir -p ./public/%s/%s", langue, source.directory))
-			os.execute(string.format("cp ./style.css ./public/%s", langue))
 			target = io.open(string.format("./public/%s/%s.html", langue, source.require_path), "w")
 			if (not target) then
 				io.stderr:write("Could not open result file\n")
@@ -51,6 +68,8 @@ local function get_sources()
 	return result
 end
 
+copy_media()
+copy_style()
 for _, source in pairs(get_sources()) do
 	compile_source(source)
 end
