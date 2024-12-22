@@ -5,6 +5,9 @@ local base_template = [[
   <meta charset="utf-8">
   <title>Benjamin Vosin</title>
   <link rel="stylesheet" href="%s"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=B612:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
 	%s
@@ -16,6 +19,9 @@ local base_template = [[
 </html>
 ]]
 local header_format = [[
+<div class="nom">
+Benjamin <span style="font-variant-caps:small-caps">Voisin</span>
+</div>
 	<nav>
 	  <ul>
 		<li><a style="text-decoration:none" href="%s" class="%s">Acceuil</a></li><li><a style="text-decoration:none" href="%s" class="%s">Recherche</a></li><li><a style="text-decoration:none" href="%s" class="%s">Projets</a></li><li><a style="text-decoration:none" href="%s" class="%s">Contact</a></li>

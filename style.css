@@ -9,391 +9,352 @@
 body 
 {
 	color: var(--couleurfonce);
-	background-color: var(--couleurfonce);
+	background-color: var(--couleurpale);
+	font-family: "B612", serif;
 }
 
-/*cadre au dessus du menu*/
-#titre
+.container
+{
+	min-width: 818px;
+	width:60%;
+	text-align:justify;
+	margin-left:auto; 
+	margin-right:auto; 
+	padding:10px 10px 10px 10px;
+	background-color: var(--couleurpale);
+	overflow: auto;
+}
+
+.nom {
+	font-size: 30pt;
+	text-align: center;
+	padding-top: 50px;
+}
+
+nav
+{
+	min-width:820px;
+	text-align:right;
+	width: 100%;
+	margin: 0px auto 0px auto;
+	background-color: var(--couleurpale);
+	position: sticky;
+	padding-left : 0;
+	padding-right : 0;
+	padding-top : 5px;
+	padding-bottom : 5px;
+	top: -1px;
+}
+nav ul{
+	list-style-type: none;
+	margin: 0px auto 0px auto;
+}
+
+nav ul li{
+	display: inline-block;
+	text-align: center;
+	position: relative;
+}
+nav ul::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+
+.sous{
+	display: none;
+	box-shadow: 0px 1px 2px #CCC;
+	background-color: var(--couleurmedium);
+	position: absolute;
+	width: 120%;
+	z-index: 1000;
+}
+nav > ul li:hover .sous{
+	display: block;
+	margin-top : 0px;
+	padding-left : 0 ;
+	border-radius: 18px;
+	-webkit-border-radius: 11px;
+	-moz-border-radius: 11px;
+}
+
+.sous li{
+	float: left;
+	width: 100%;
+	text-align: center;
+	border-radius: 18px;
+	min-width: 40px;
+	-webkit-border-radius: 11px;
+	-moz-border-radius: 11px;
+}
+
+
+.sous a{
+	/* padding: 10px; */
+	/* border-bottom: none; */
+
+}
+
+.sous a:hover{
+	/* border-bottom: none; */
+	background-color: var(--couleurpale);
+}
+
+.deroulant > a::after{
+	content:" ▼";
+	font-size: 12px;
+}
+
+a.bouton3
+{
+	padding: 4px 4px; 
+	background: var(--couleurmedium); 
+	color: var(--couleurfonce); 
+	font-weight: bold;
+	/*border: 2px solid #B0D8E8;*/
+	display: inline-block;
+	border-radius: 18px;
+	-webkit-border-radius: 11px;
+	-moz-border-radius: 11px;
+	-webkit-transition: all 0.5s ease-out 0s;
+	-moz-transition: all 0.5s ease-out 0s;
+	transition: all 0.5s ease-out 0
+}
+a.bouton3:hover 
+{
+	background: var(--couleurpale); 
+	color: var(--couleurfonce);
+}
+
+/*bouton pour aller sur une autre page*/
+a.bouton1 
+{
+	padding: 10px 15px; 
+	color: var(--couleurfonce); 
+	font-weight: bold;
+	/*border: 2px solid #B0D8E8;*/
+	margin: 3px 3px 3px 3px;
+	display: inline-block;
+	font-size: 18px;
+	border-radius: 18px;
+	-webkit-border-radius: 11px;
+	-moz-border-radius: 11px;
+	-webkit-transition: all 0.5s ease-out 0s;
+	-moz-transition: all 0.5s ease-out 0s;
+	transition: all 0.5s ease-out 0
+}
+a.bouton1:hover 
+{
+	color: var(--couleurfonce);
+	color: red;
+}
+
+/*bouton quand on est sur la page*/
+a.bouton2 
+{
+	padding: 10px 15px; 
+	margin: 3px 3px 3px 3px;
+	display: inline-block;
+	color: red; 
+	font-weight: bold;
+	font-size: 18px;
+	border-radius: 18px;
+	-webkit-border-radius: 11px;
+	-moz-border-radius: 11px;
+}
+
+/*Evite que le menu n'ait une hauteur nulle*/
+nav ul::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+
+
+
+/*style du contenu de la page*/
+.conteneur
 {
 	min-width: 818px;
 	width:80%;
-	height:200px;
+	text-align:justify;
 	margin-left:auto; 
-	margin-right:auto;
-	padding-top : 10px;
-	padding-bottom : 10px;
-	padding-left : 10px;
-	padding-right : 10px;
+	margin-right:auto; 
+	padding:10px 10px 10px 10px;
 	background-color: var(--couleurpale);
+	overflow: auto;
+}
+
+/*boite flottante a droite*/
+.rightbox
+{
+	float : right;
+	margin-left:20pt;
+}
+
+
+
+
+/*mise en forme des traits qui separent les différentes sections*/
+hr 
+{
+	height:2px;
+	width:100%;
+	background-color:var(--couleurfonce);
+	align:left;
+	margin-top:5pt;
+	border:0;
+}
+
+/*coloration des liens*/
+a 
+{
+	color: var(--couleurfonce);
+}
+
+
+table
+{
+	border-collapse: collapse; /* Les bordures du tableau seront collées (plus joli) */
+}
+td
+{
+	border: 1px solid black;
+	text-align: center; 
+	vertical-align: middle; 
+}
+
+#vignettesvideo td 
+{
+	border : none;
+	width: 220px;
+	height: 160px;
+}
+
+
+.vignette span
+{ 
+	display: none; /* On masque le span par défaut */
+}
+a.vignette:hover
+{
+	border: 0; /* Pour que ce soit fonctionnel sous IE */
+}
+a.vignette:hover span /* On définit où va s'afficher l'image au passage de la souris */
+{ 
+	display: block; 
+	position : fixed;
+	top: 70px;
+	left: 50%;
+	transform: translateX(-50%);
+
+}
+
+div.scroll {
+	position: relative;
+	background-color: #ffffff;
+	width: 90%;
+	height: 400px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	text-align: left;
+	padding: 20px;
+}
+.svg {
+	position: center;
+	background-color:var(--couleur-medium);
+	width: 90%;
+	height: 500px;
+	overflow-x: auto;
+	overflow-y: auto;
+	text-align: left;
+	padding: 20px;
+}
+
+.copyBtn {
+	position: sticky;
+	top: 0px;
+	left: 470px;
+	background-color: #ffffff;
+	border: 1px solid #ccc;
+	padding: 5px 10px;
+	cursor: pointer;
+	text-align: right;
+	z-index: 1;
+}
+
+.svgBtn {
+	position: sticky;
+	top: 30px;
+	left: 1300px;
+	background-color: #ffffff;
+	border: 1px solid #ccc;
+	padding: 5px 10px;
+	cursor: pointer;
+	text-align: left;
+	z-index: 1;
+}
+
+.flex-container {
+	display: flex;
+}
+
+.flex-child {
+	flex: 1;
+}  
+
+.flex-child:first-child {
+	margin-right: 20px;
 } 
 
-
-#contact
-{
-	height:50px;
-	width:80%;
-	display:flex;
-	justify-content: center;
-	text-align: center;
+/* The alert message box */
+.alert {
+	padding: 20px;
+	background-color: #f44336; /* Red */
+	color: white;
+	margin-bottom: 15px;
 }
 
-.contact_box
-{
-	padding-left : 10px;
-	padding-right : 10px;
-}
-#boite
-{
-	display:flex;
-	justify-content: flex-start;
-	text-align: center;
-	/* background-color: royalblue; */
-}
-
-/*boite flottante a gauche*/
-#boitephoto
-{
-
-	/* background-color: purple; */
-	height :200px ;
-	width : 200px;
+/* The close button */
+.closebtn {
+	margin-left: 15px;
+	color: white;
+	font-weight: bold;
+	float: right;
+	font-size: 22px;
+	line-height: 20px;
+	cursor: pointer;
+	transition: 0.3s;
 }
 
-#photo
-{
-	clip-path: ellipse(50% 50%);
-}
+/* When moving the mouse over the close button */
+.closebtn:hover {
+	color: black;
+} 
 
-#boitenom
-{
-	/* display: flex; */
-	display: table-cell;
-	vertical-align: middle;
-	/* justify-content: center;
-	 *         align-items: center;  */
-/* position : relative; */
-height:200px;
-width:100%;
-/* background-color: coral; */
-		    }
+/* For the font */
+/* .b612-regular { */
+/*   font-family: "B612", serif; */
+/*   font-weight: 400; */
+/*   font-style: normal; */
+/* } */
 
-		    #nom
-		    {    
-			    /* position : absolute; */
-			    /* /* top: 50%;  */
-			    /* left: 100%;  */
-			    /* transform: translate(-50%,-50%); */
+/* .b612-bold { */
+/*   font-family: "B612", serif; */
+/*   font-weight: 700; */
+/*   font-style: normal; */
+/* } */
 
-			    padding-top : 68px;
-			    height:auto;
-			    font-weight:bold;
-			    font-size:64px;
-			    padding-left: 10px;
-			    /* background-color: redvar(--couleurpale); */
-		    } 
-		    /*menu*/
-		    nav
-		    {
-			    min-width:820px;
-			    text-align:center;
-			    width: 100%;
-			    margin: 0px auto 0px auto;
-			    background-color: var(--couleurfonce);
-			    position: sticky;
-			    padding-left : 0;
-			    padding-right : 0;
-			    padding-top : 5px;
-			    padding-bottom : 5px;
-			    top: -1px;
-		    }
-		    nav ul{
-			    list-style-type: none;
-			    margin: 0px auto 0px auto;
-		    }
+/* .b612-regular-italic { */
+/*   font-family: "B612", serif; */
+/*   font-weight: 400; */
+/*   font-style: italic; */
+/* } */
 
-		    nav ul li{
-			    display: inline-block;
-			    text-align: center;
-			    position: relative;
-		    }
-		    nav ul::after{
-			    content: "";
-			    display: table;
-			    clear: both;
-		    }
-
-
-		    .sous{
-			    display: none;
-			    box-shadow: 0px 1px 2px #CCC;
-			    background-color: var(--couleurmedium);
-			    position: absolute;
-			    width: 120%;
-			    z-index: 1000;
-		    }
-		    nav > ul li:hover .sous{
-			    display: block;
-			    margin-top : 0px;
-			    padding-left : 0 ;
-			    border-radius: 18px;
-			    -webkit-border-radius: 11px;
-			    -moz-border-radius: 11px;
-		    }
-
-		    .sous li{
-			    float: left;
-			    width: 100%;
-			    text-align: center;
-			    border-radius: 18px;
-			    min-width: 40px;
-			    -webkit-border-radius: 11px;
-			    -moz-border-radius: 11px;
-		    }
-
-
-		    .sous a{
-			    /* padding: 10px; */
-			    /* border-bottom: none; */
-
-		    }
-
-		    .sous a:hover{
-			    /* border-bottom: none; */
-			    background-color: var(--couleurpale);
-		    }
-
-		    .deroulant > a::after{
-			    content:" ▼";
-			    font-size: 12px;
-		    }
-
-		    a.bouton3
-		    {
-			    padding: 4px 4px; 
-			    background: var(--couleurmedium); 
-			    color: var(--couleurfonce); 
-			    font-weight: bold;
-			    /*border: 2px solid #B0D8E8;*/
-			    display: inline-block;
-			    border-radius: 18px;
-			    -webkit-border-radius: 11px;
-			    -moz-border-radius: 11px;
-			    -webkit-transition: all 0.5s ease-out 0s;
-			    -moz-transition: all 0.5s ease-out 0s;
-			    transition: all 0.5s ease-out 0
-		    }
-		    a.bouton3:hover 
-		    {
-			    background: var(--couleurpale); 
-			    color: var(--couleurfonce);
-		    }
-
-		    /*bouton pour aller sur une autre page*/
-		    a.bouton1 
-		    {
-			    padding: 10px 15px; 
-			    background: var(--couleurfonce); 
-			    color: var(--couleurpale); 
-			    font-weight: bold;
-			    /*border: 2px solid #B0D8E8;*/
-			    margin: 3px 3px 3px 3px;
-			    display: inline-block;
-			    font-size: 18px;
-			    border-radius: 18px;
-			    -webkit-border-radius: 11px;
-			    -moz-border-radius: 11px;
-			    -webkit-transition: all 0.5s ease-out 0s;
-			    -moz-transition: all 0.5s ease-out 0s;
-			    transition: all 0.5s ease-out 0
-		    }
-		    a.bouton1:hover 
-		    {
-			    background: var(--couleurmedium); 
-			    color: var(--couleurfonce);
-		    }
-
-		    /*bouton quand on est sur la page*/
-		    a.bouton2 
-		    {
-			    padding: 10px 15px; 
-			    background: var(--couleurmedium); 
-			    margin: 3px 3px 3px 3px;
-			    display: inline-block;
-			    color: var(--couleurfonce); 
-			    font-weight: bold;
-			    font-size: 18px;
-			    border-radius: 18px;
-			    -webkit-border-radius: 11px;
-			    -moz-border-radius: 11px;
-		    }
-
-		    /*Evite que le menu n'ait une hauteur nulle*/
-		    nav ul::after{
-			    content: "";
-			    display: table;
-			    clear: both;
-		    }
-
-
-
-
-		    /*style du contenu de la page*/
-		    .conteneur
-		    {
-			    min-width: 818px;
-			    width:80%;
-			    text-align:justify;
-			    margin-left:auto; 
-			    margin-right:auto; 
-			    padding:10px 10px 10px 10px;
-			    background-color: var(--couleurpale);
-			    overflow: auto;
-		    }
-
-		    /*boite flottante a droite*/
-		    .rightbox
-		    {
-			    float : right;
-			    margin-left:20pt;
-		    }
-
-
-
-
-		    /*mise en forme des traits qui separent les différentes sections*/
-		    hr 
-		    {
-			    height:2px;
-			    width:100%;
-			    background-color:var(--couleurfonce);
-			    align:left;
-			    margin-top:5pt;
-			    border:0;
-		    }
-
-		    /*coloration des liens*/
-		    a 
-		    {
-			    color: var(--couleurfonce);
-		    }
-
-
-		    table
-		    {
-			    border-collapse: collapse; /* Les bordures du tableau seront collées (plus joli) */
-		    }
-		    td
-		    {
-			    border: 1px solid black;
-			    text-align: center; 
-			    vertical-align: middle; 
-		    }
-
-		    #vignettesvideo td 
-		    {
-			    border : none;
-			    width: 220px;
-			    height: 160px;
-		    }
-
-
-		    .vignette span
-		    { 
-			    display: none; /* On masque le span par défaut */
-		    }
-		    a.vignette:hover
-		    {
-			    border: 0; /* Pour que ce soit fonctionnel sous IE */
-		    }
-		    a.vignette:hover span /* On définit où va s'afficher l'image au passage de la souris */
-		    { 
-			    display: block; 
-			    position : fixed;
-			    top: 70px;
-			    left: 50%;
-			    transform: translateX(-50%);
-
-		    }
-
-      div.scroll {
-        position: relative;
-        background-color: #ffffff;
-        width: 90%;
-        height: 400px;
-        overflow-x: hidden;
-        overflow-y: auto;
-        text-align: left;
-        padding: 20px;
-      }
-      .svg {
-        position: center;
-        background-color:var(--couleur-medium);
-        width: 90%;
-        height: 500px;
-        overflow-x: auto;
-        overflow-y: auto;
-        text-align: left;
-        padding: 20px;
-      }
-
-      .copyBtn {
-        position: sticky;
-        top: 0px;
-        left: 470px;
-        background-color: #ffffff;
-        border: 1px solid #ccc;
-        padding: 5px 10px;
-        cursor: pointer;
-        text-align: right;
-        z-index: 1;
-      }
-
-      .svgBtn {
-        position: sticky;
-        top: 30px;
-        left: 1300px;
-        background-color: #ffffff;
-        border: 1px solid #ccc;
-        padding: 5px 10px;
-        cursor: pointer;
-        text-align: left;
-        z-index: 1;
-      }
-
-      .flex-container {
-      display: flex;
-      }
-
-      .flex-child {
-      flex: 1;
-      }  
-
-      .flex-child:first-child {
-      margin-right: 20px;
-      } 
-
-      /* The alert message box */
-      .alert {
-      padding: 20px;
-      background-color: #f44336; /* Red */
-      color: white;
-      margin-bottom: 15px;
-      }
-
-      /* The close button */
-      .closebtn {
-      margin-left: 15px;
-      color: white;
-      font-weight: bold;
-      float: right;
-      font-size: 22px;
-      line-height: 20px;
-      cursor: pointer;
-      transition: 0.3s;
-      }
-
-      /* When moving the mouse over the close button */
-      .closebtn:hover {
-      color: black;
-      } 
-
+/* .b612-bold-italic { */
+/*   font-family: "B612", serif; */
+/*   font-weight: 700; */
+/*   font-style: italic; */
+/* } */
