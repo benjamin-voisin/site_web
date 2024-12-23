@@ -6,11 +6,16 @@ local at = {
 	fr = "à",
 	en = "at",
 }
+
+local with = {
+	fr = "Avec",
+	en = "With",
+}
 local function format_experience_recherche(recherche, langue)
 	local result = string.format([[
 <h3><a href="../%s">%s</a> <font size=2>- %s</font></h3>%s]], recherche.lien, recherche.title[langue], recherche.dates[langue], recherche.description[langue])
 
-	result = result .. "<h4>Avec "
+	result = result .. "<h4>" .. with[langue] .." "
 	for key, encadrant in pairs(recherche.encadrants) do
 		if (key > 1) then
 			result = result .. ", "
