@@ -15,8 +15,8 @@ return {
 		}
 	},
 	description = {
-		fr = "FEUR",
-		en = "FEUR MAIS EN ANGLAIS",
+		fr = "Étude formelle dans le prouveur Squirrel du protocole d’authentification AKMA pour la 5G.",
+		en = "Formal study of the AMKMA authontication protocol for 5G, with the Squirrel Prover.",
 	},
 	location = {
 		name = {
