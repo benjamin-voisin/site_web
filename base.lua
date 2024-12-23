@@ -17,7 +17,7 @@ local footer_format = [[
 					<a href ="https://github.com/benjamin-voisin" target="_blank"><img class = "contact_image" src="%sgithub.svg" alt="Compte GitHub : benjamin-voisin" width = "20px" ></a>
 				</div>
 				<div class = "contact_box">
-					<a href ="https://piaille.fr/@benjaminV" target="_blank"><img class = "contact_image" src="%smastodon.svg" alt="Compte mastodon : @piaille.fr@benjaminV" height="20px" width="20px"></a>
+					<a rel="me" href="https://piaille.fr/@benjaminV" target="_blank"><img class = "contact_image" src="%smastodon.svg" alt="Compte mastodon : @piaille.fr@benjaminV" height="20px" width="20px"></a>
 				</div>
 				<div class = "contact_box">
 					<a href ="https://codeberg.org/benjaminV" target="_blank"><img class = "contact_image" src="%scodeberg.svg" alt="Compte Codeberg : benjaminV" height="20px" width="20px"></a>
@@ -33,6 +33,7 @@ local footer_format = [[
 local base_template = [[
 <!DOCTYPE html>
 <html lang="%s">
+<meta name="fediverse:creator" content="@benjaminV@piaille.fr">
 <head>
   <meta charset="utf-8">
   <title>Benjamin Vosin</title>
