@@ -22,6 +22,9 @@ local footer_format = [[
 				<div class = "contact_box">
 					<a href ="https://codeberg.org/benjaminV" target="_blank"><img class = "contact_image" src="%scodeberg.svg" alt="Compte Codeberg : benjaminV" height="20px" width="20px"></a>
 				</div>
+				<div class = "contact_box">
+					<a href ="%scroco.html"><img class = "contact_image" src="%scrocodile.svg" height="20px" width="20px"></a>
+				</div>
 			</div>
 			</div>
 	  </center> 
@@ -58,7 +61,7 @@ local base_template = [[
 ]]
 local header_format = [[
 <div class="nom">
-Benjamin <span style="font-variant-caps:small-caps">Voisin</span>
+%s
 </div>
 	<nav>
 	  <ul>
@@ -70,19 +73,23 @@ Benjamin <span style="font-variant-caps:small-caps">Voisin</span>
 local buttons_name = {
 	acceuil = {
 		fr = "Acceuil",
-		en = "Home"
+		en = "Home",
+		croco = "CrocHome",
 	},
 	recherche = {
 		fr = "Recherche",
-		en = "Research"
+		en = "Research",
+		croco = "CrocoResearch",
 	},
 	projets = {
 		fr = "Projets",
-		en = "Projects"
+		en = "Projects",
+		croco = "CrocoProjets",
 	},
 	contact = {
 		fr = "Contact",
-		en = "Contact"
+		en = "Contact",
+		croco = "CroContacts",
 	},
 }
 
@@ -103,6 +110,7 @@ local function depth_to_path(depth)
 end
 
 local function header(section, langage, depth, lien)
+	local name = [[Benjamin <span style="font-variant-caps:small-caps">Voisin</span>]]
 	local change_langage = depth_to_path(depth) .. lien
 	local l = op_lang(langage)
 	if (langage == "fr") then
@@ -113,19 +121,23 @@ local function header(section, langage, depth, lien)
 		l = "fr"
 	end
 	if (section == "Acceuil") then
-		return string.format(header_format, "index.html", "bouton2", buttons_name.acceuil[langage], "recherche/index.html", "bouton1", buttons_name.recherche[langage], "projets/index.html", "bouton1", buttons_name.projets[langage], "contact/index.html", "bouton1", buttons_name.contact[langage], change_langage, l)
+		return string.format(header_format, name, "index.html", "bouton2", buttons_name.acceuil[langage], "recherche/index.html", "bouton1", buttons_name.recherche[langage], "projets/index.html", "bouton1", buttons_name.projets[langage], "contact/index.html", "bouton1", buttons_name.contact[langage], change_langage, l)
 	elseif (section == "Recherche") then
-		return string.format(header_format, "../index.html", "bouton1", buttons_name.acceuil[langage], "index.html", "bouton2", buttons_name.recherche[langage], "../projets/index.html", "bouton1", buttons_name.projets[langage], "../contact/index.html", "bouton1", buttons_name.contact[langage], change_langage, l)
+		return string.format(header_format, name, "../index.html", "bouton1", buttons_name.acceuil[langage], "index.html", "bouton2", buttons_name.recherche[langage], "../projets/index.html", "bouton1", buttons_name.projets[langage], "../contact/index.html", "bouton1", buttons_name.contact[langage], change_langage, l)
 	elseif (section == "Projets") then
-		return string.format(header_format, "../index.html", "bouton1", buttons_name.acceuil[langage], "../recherche/index.html", "bouton1", buttons_name.recherche[langage], "index.html", "bouton2", buttons_name.projets[langage], "../contact/index.html", "bouton1", buttons_name.contact[langage], change_langage, l)
+		return string.format(header_format, name, "../index.html", "bouton1", buttons_name.acceuil[langage], "../recherche/index.html", "bouton1", buttons_name.recherche[langage], "index.html", "bouton2", buttons_name.projets[langage], "../contact/index.html", "bouton1", buttons_name.contact[langage], change_langage, l)
 	elseif (section == "Contact") then
-		return string.format(header_format, "../index.html", "bouton1", buttons_name.acceuil[langage], "../recherche/index.html", "bouton1", buttons_name.recherche[langage], "../projets/index.html", "bouton1", buttons_name.projets[langage], "index.html", "bouton2", buttons_name.contact[langage], change_langage, l)
+		return string.format(header_format, name, "../index.html", "bouton1", buttons_name.acceuil[langage], "../recherche/index.html", "bouton1", buttons_name.recherche[langage], "../projets/index.html", "bouton1", buttons_name.projets[langage], "index.html", "bouton2", buttons_name.contact[langage], change_langage, l)
+	else
+		-- Section is "croco"
+		local croco_name = [[Colie <span style="font-variant-caps:small-caps">Coolol</span>]]
+		return string.format(header_format, croco_name, "./index.html", "bouton1", buttons_name.acceuil.croco, "./recherche/index.html", "bouton1", buttons_name.recherche.croco, "./projets/index.html", "bouton1", buttons_name.projets.croco, "./contact/index.html", "bouton2", buttons_name.contact.croco, change_langage, l)
 	end
 end
 
 local function footer(depth)
 	local prefixe = depth_to_path(depth) .. "media/"
-	return string.format(footer_format, prefixe, prefixe, prefixe, prefixe)
+	return string.format(footer_format, prefixe, prefixe, prefixe, prefixe, depth_to_path(depth), prefixe)
 end
 
 return {
