@@ -7,6 +7,7 @@ local text = [[
 
 <h1>You fell in a CrocoLoop !</h1>
 Why not click on theese buttons to see the rest of the loop ?
+<br><br>
 <span style="position: relative; float: left;">
 	<a style="text-decoration:none" href="https://perso.eleves.ens-rennes.fr/people/alexis.hamon/crocodile.html" class="bouton1"><= Previous</a>
 </span>
