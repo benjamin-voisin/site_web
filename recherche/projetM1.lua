@@ -25,6 +25,6 @@ return {
 	},
 	location = "Inria Rennes",
 	content = function(self, lang)
-		return Base.base(lang, self.title[lang], "Recherche", "../style.css", 1)
+		return Base.base(lang, self.title[lang], "Recherche", "../style.css", 1, self.lien)
 	end
 }

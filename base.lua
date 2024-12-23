@@ -62,7 +62,7 @@ Benjamin <span style="font-variant-caps:small-caps">Voisin</span>
 </div>
 	<nav>
 	  <ul>
-		<li><a style="text-decoration:none" href="%s" class="%s">%s</a></li><li><a style="text-decoration:none" href="%s" class="%s">%s</a></li><li><a style="text-decoration:none" href="%s" class="%s">%s</a></li><li><a style="text-decoration:none" href="%s" class="%s">%s</a></li>
+		<li><a style="text-decoration:none" href="%s" class="%s">%s</a></li><li><a style="text-decoration:none" href="%s" class="%s">%s</a></li><li><a style="text-decoration:none" href="%s" class="%s">%s</a></li><li><a style="text-decoration:none" href="%s" class="%s">%s</a></li><li><a style="text-decoration:none" href="%s" class="bouton1">%s</a></li>
   </ul>
 	</nav>
 ]]
@@ -86,15 +86,11 @@ local buttons_name = {
 	},
 }
 
-local function header(section, langage)
-	if (section == "Acceuil") then
-		return string.format(header_format, "index.html", "bouton2", buttons_name.acceuil[langage], "recherche/index.html", "bouton1", buttons_name.recherche[langage], "projets/index.html", "bouton1", buttons_name.projets[langage], "contact/index.html", "bouton1", buttons_name.contact[langage])
-	elseif (section == "Recherche") then
-		return string.format(header_format, "../index.html", "bouton1", buttons_name.acceuil[langage], "index.html", "bouton2", buttons_name.recherche[langage], "../projets/index.html", "bouton1", buttons_name.projets[langage], "../contact/index.html", "bouton1", buttons_name.contact[langage])
-	elseif (section == "Projets") then
-		return string.format(header_format, "../index.html", "bouton1", buttons_name.acceuil[langage], "../recherche/index.html", "bouton1", buttons_name.recherche[langage], "index.html", "bouton2", buttons_name.projets[langage], "../contact/index.html", "bouton1", buttons_name.contact[langage])
-	elseif (section == "Contact") then
-		return string.format(header_format, "../index.html", "bouton1", buttons_name.acceuil[langage], "../recherche/index.html", "bouton1", buttons_name.recherche[langage], "../projets/index.html", "bouton1", buttons_name.projets[langage], "index.html", "bouton2", buttons_name.contact[langage])
+local function op_lang(langage)
+	if (langage == "fr") then
+		return "en"
+	else
+		return "fr"
 	end
 end
 
@@ -105,6 +101,28 @@ local function depth_to_path(depth)
 	end
 	return prefixe
 end
+
+local function header(section, langage, depth, lien)
+	local change_langage = depth_to_path(depth) .. lien
+	local l = op_lang(langage)
+	if (langage == "fr") then
+		change_langage = depth_to_path(depth + 1) .. lien
+		l = "en"
+	else
+		change_langage = depth_to_path(depth) .. "fr/" .. lien
+		l = "fr"
+	end
+	if (section == "Acceuil") then
+		return string.format(header_format, "index.html", "bouton2", buttons_name.acceuil[langage], "recherche/index.html", "bouton1", buttons_name.recherche[langage], "projets/index.html", "bouton1", buttons_name.projets[langage], "contact/index.html", "bouton1", buttons_name.contact[langage], change_langage, l)
+	elseif (section == "Recherche") then
+		return string.format(header_format, "../index.html", "bouton1", buttons_name.acceuil[langage], "index.html", "bouton2", buttons_name.recherche[langage], "../projets/index.html", "bouton1", buttons_name.projets[langage], "../contact/index.html", "bouton1", buttons_name.contact[langage], change_langage, l)
+	elseif (section == "Projets") then
+		return string.format(header_format, "../index.html", "bouton1", buttons_name.acceuil[langage], "../recherche/index.html", "bouton1", buttons_name.recherche[langage], "index.html", "bouton2", buttons_name.projets[langage], "../contact/index.html", "bouton1", buttons_name.contact[langage], change_langage, l)
+	elseif (section == "Contact") then
+		return string.format(header_format, "../index.html", "bouton1", buttons_name.acceuil[langage], "../recherche/index.html", "bouton1", buttons_name.recherche[langage], "../projets/index.html", "bouton1", buttons_name.projets[langage], "index.html", "bouton2", buttons_name.contact[langage], change_langage, l)
+	end
+end
+
 local function footer(depth)
 	local prefixe = depth_to_path(depth) .. "media/"
 	return string.format(footer_format, prefixe, prefixe, prefixe, prefixe)
@@ -112,7 +130,7 @@ end
 
 return {
 	build = false,
-	base = function(lang, contenu, section, style_path, depth)
-		return (string.format(base_template, lang, style_path, depth_to_path(depth), header(section, lang), contenu, footer(depth)))
+	base = function(lang, contenu, section, style_path, depth, lien)
+		return (string.format(base_template, lang, style_path, depth_to_path(depth), header(section, lang, depth, lien), contenu, footer(depth)))
 	end
 }

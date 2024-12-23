@@ -7,7 +7,8 @@ local intro = {
 
 return {
 	build = true,
+	lien = "./index.html",
 	content = function(self, lang)
-		return Base.base(lang, intro[lang], "Acceuil", "style.css")
+		return Base.base(lang, intro[lang], "Acceuil", "style.css", 0, self.lien)
 	end
 }
