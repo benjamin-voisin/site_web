@@ -13,7 +13,7 @@ local with = {
 }
 local function format_experience_recherche(recherche, langue)
 	local result = string.format([[
-<h3><a href="../%s">%s</a> <font size=2>- %s</font></h3>%s]], recherche.lien, recherche.title[langue], recherche.dates[langue], recherche.description[langue])
+<h3><a href="../%s">%s</a> <font size=3>- %s</font></h3>%s]], recherche.lien, recherche.title[langue], recherche.dates[langue], recherche.description[langue])
 
 	if (recherche.encadrants) then
 		result = result .. "<h4>" .. with[langue] .." "
