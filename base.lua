@@ -14,13 +14,13 @@ local footer_format = [[
 			<br>
 			<div id = "contact" >
 				<div class = "contact_box">
-					<a href ="https://github.com/benjamin-voisin" target="_blank"><img src="%slogo github.png" alt="Compte GitHub : benjamin-voisin" height="50px" width="50px"></a>
+					<a href ="https://github.com/benjamin-voisin" target="_blank"><img class = "contact_image" src="%sgithub.svg" alt="Compte GitHub : benjamin-voisin" width = "20px" ></a>
 				</div>
 				<div class = "contact_box">
-					<a href ="https://fr.wikipedia.org/wiki/Utilisateur:Tétraodon_pardalis" target="_blank"><img src="%slogo wikipedia.png" alt="Compte Wikipédia : Tétraodon pardalis" height="50px" width="50px"></a>
+					<a href ="https://piaille.fr/@benjaminV" target="_blank"><img class = "contact_image" src="%smastodon.svg" alt="Compte mastodon : @piaille.fr@benjaminV" height="20px" width="20px"></a>
 				</div>
 				<div class = "contact_box">
-					<a href ="https://framagit.org/Vneb23" target="_blank"><img src="%sframasoft.png" alt="Compte framagit : Vneb23" height="50px" width="50px"></a>
+					<a href ="https://codeberg.org/benjaminV" target="_blank"><img class = "contact_image" src="%scodeberg.svg" alt="Compte Codeberg : benjaminV" height="20px" width="20px"></a>
 				</div>
 			</div>
 			</div>

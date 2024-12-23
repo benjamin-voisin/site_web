@@ -355,6 +355,10 @@ div.scroll {
 
 .contact_box
 {
-	padding-left : 10px;
-	padding-right : 10px;
+	padding-left : 5px;
+	padding-right : 5px;
+}
+.contact_image {
+	height: 80%;
+	aspect-ratio: 1 / 1;
 }
