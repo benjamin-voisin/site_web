@@ -33,8 +33,8 @@ local footer_format = [[
 local base_template = [[
 <!DOCTYPE html>
 <html lang="%s">
-<meta name="fediverse:creator" content="@benjaminV@piaille.fr">
 <head>
+  <meta name="fediverse:creator" content="@benjaminV@piaille.fr">
   <meta charset="utf-8">
   <title>Benjamin Vosin</title>
   <link rel="stylesheet" href="%s"/>
