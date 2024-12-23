@@ -131,7 +131,7 @@ local function header(section, langage, depth, lien)
 	else
 		-- Section is "croco"
 		local croco_name = [[Colie <span style="font-variant-caps:small-caps">Coolol</span>]]
-		return string.format(header_format, croco_name, "./index.html", "bouton1", buttons_name.acceuil.croco, "./recherche/index.html", "bouton1", buttons_name.recherche.croco, "./projets/index.html", "bouton1", buttons_name.projets.croco, "./contact/index.html", "bouton2", buttons_name.contact.croco, change_langage, l)
+		return string.format(header_format, croco_name, "./index.html", "bouton1", buttons_name.acceuil.croco, "./recherche/index.html", "bouton1", buttons_name.recherche.croco, "./projets/index.html", "bouton1", buttons_name.projets.croco, "./contact/index.html", "bouton1", buttons_name.contact.croco, change_langage, l)
 	end
 end
 
