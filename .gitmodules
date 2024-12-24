@@ -1,0 +1,3 @@
+[submodule "Luastic"]
+	path = Luastic
+	url = git@codeberg.org:BenjaminV/Luastic.git
