@@ -194,7 +194,9 @@ nav ul::after{
 	margin-left:20pt;
 }
 
-
+.recherche_item {
+	background-color: var(--couleurpale);
+}
 
 
 /*mise en forme des traits qui separent les différentes sections*/
@@ -362,4 +364,9 @@ div.scroll {
 .contact_image {
 	height: 80%;
 	aspect-ratio: 1 / 1;
+}
+table, th, td {
+	border: 0px solid white;
+	padding-left: 8px;
+	padding-right: 8px;
 }
