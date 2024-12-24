@@ -3,7 +3,7 @@ local Base = require("base")
 local para = {
 	fr = [[
 <h2>Mail (méthode à privilégier)</h2>
-Pour les contacts professionnels, le meilleur moyen de contact reste  les mails, de préférence chiffré (avec ma clé <a href="../media/public_key.asc" download>PGP</a> <font size=2>(F6BB 7666 62E7 D433 F7EE 159E C5C8 EDD1 25FB FD78)</font>).
+Pour les contacts professionnels, le meilleur moyen de contact reste  les mails : <a class="courriel" a="YmVuamFtaW4udm9pc2lu" b="QGVucy1yZW5uZXMuZnI">prenom.nom@ens-rennes.fr</a>, de préférence chiffré (avec ma clé <a href="../media/public_key.asc" download>PGP</a> <font size=2>(F6BB 7666 62E7 D433 F7EE 159E C5C8 EDD1 25FB FD78)</font>).
 <h2>Messageries instantanées</h2>
 Je suis également joignables sur les messagerise instantannées (par ordre de préférence) :
 <br><br>
@@ -15,7 +15,7 @@ Je suis également joignables sur les messagerise instantannées (par ordre de p
 ]],
 	en = [[
 <h2>Email (preferred method)</h2>
-For professional contacts, the preffered means still is email, encrypted if possible (with my <a href="../media/public_key.asc" download>PGP key</a> <font size=2>(F6BB 7666 62E7 D433 F7EE 159E C5C8 EDD1 25FB FD78)</font>).
+For professional contacts, the preffered means still is email: <a class="courriel" a="YmVuamFtaW4udm9pc2lu" b="QGVucy1yZW5uZXMuZnI">firstname.name@ens-rennes.fr</a> encrypted if possible (with my <a href="../media/public_key.asc" download>PGP key</a> <font size=2>(F6BB 7666 62E7 D433 F7EE 159E C5C8 EDD1 25FB FD78)</font>).
 <h2>Instant Messaging Systems</h2>
 I’m also available on theese instant messaging systems (ordered by preferences) :
 <table>
