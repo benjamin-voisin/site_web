@@ -4,9 +4,7 @@ local footer_format = [[
 			<div id = "footer">
 			<hr>
 			<a id="courriel" a="YmVuamFtaW4udm9pc2lu" b="QGVucy1yZW5uZXMuZnI">
-				<font color="blue">
-					prenom.nom@ens-rennes.fr
-				</font>
+				prenom.nom@ens-rennes.fr
 			</a>
 			<a href="%s/public_key.asc" download>
 			PGP

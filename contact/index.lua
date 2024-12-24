@@ -2,10 +2,10 @@ local Base = require("base")
 
 local para = {
 	fr = [[
-  Vous pouvez me contacter à mon adresse mail suivante : <a id="melcontact" a="YmVuamFtaW4udm9pc2lu" b="QGVucy1yZW5uZXMuZnI"> <font color="blue"> prenom.nom@ens-rennes.fr </font> </a>. Ma clé PGP est disponible <a href="../media/public_key.asc" download>ici</a>.
+  Vous pouvez me contacter à mon adresse mail suivante : <a id="melcontact" a="YmVuamFtaW4udm9pc2lu" b="QGVucy1yZW5uZXMuZnI">prenom.nom@ens-rennes.fr</a>. Ma clé PGP est disponible <a href="../media/public_key.asc" download>ici</a>.
 ]],
 	en = [[
-  You can email me at <a id="melcontact" a="YmVuamFtaW4udm9pc2lu" b="QGVucy1yZW5uZXMuZnI"> <font color="blue"> firstname.name@ens-rennes.fr </font> </a>. My PGP key is available <a href="../media/public_key.asc" download>here</a>.
+  You can email me at <a id="melcontact" a="YmVuamFtaW4udm9pc2lu" b="QGVucy1yZW5uZXMuZnI">firstname.name@ens-rennes.fr</a>. My PGP key is available <a href="../media/public_key.asc" download>here</a>.
 ]],
 }
 
