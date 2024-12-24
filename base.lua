@@ -51,7 +51,6 @@ local base_template = [[
     let a = courrieldiv.getAttribute("a");
     let b = courrieldiv.getAttribute("b");
     let courriel = atob(a+b);
-	console.log(courriel);
     courrieldiv.innerHTML = courriel;
     courrieldiv.href = atob("bWFpbHRvOg==") + courriel;
   }
