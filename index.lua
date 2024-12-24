@@ -18,8 +18,8 @@ J’ai égalements des projets peronnels, comme le test de vitesse d’écriture
 	en = string.format([[
 Welcome to my personnal website ! I am currently in third year at ENS de Rennes, in preparation for the agrétation in computer science.
 <br><br>
-My CV is available <a href = "%s">here</a>.
-<br><br>
+My resume is available <a href = "%s">here</a>.
+<br>
 <h2>Research <font size = 4>(<a href="./recherche/index.html">Details</a>)</font></h2>
 Main main research insterest is formal methods, mostly applied to proof of protocols.
 <h2>Personnal projects <font size = 4>(<a href="./projets/index.html">Details</a>)</font></h2>
