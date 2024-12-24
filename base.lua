@@ -3,7 +3,7 @@ local footer_format = [[
 		<center>
 			<div id = "footer">
 			<hr>
-			<a id="mel" title="pour m'envoyer un mail">
+			<a id="mel">
 				<font color="blue">
 					prenom.nom@ens-rennes.fr
 				</font>

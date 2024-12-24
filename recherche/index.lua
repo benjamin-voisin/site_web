@@ -37,8 +37,11 @@ return {
 	lien = "recherche/index.html",
 	content = function(self, langue)
 		local content = ""
-		for _, recherche in pairs(recherches) do
-			content = content .. format_experience_recherche(require(recherche), langue)
+		for key, recherche in pairs(recherches) do
+			content = content .. '<div class="recherche_item">' .. format_experience_recherche(require(recherche), langue) .. '</div>'
+			if (key ~= #recherches) then
+				content = content .. "<br><hr>"
+			end
 		end
 		return Base.base(langue, content, "Recherche", "../style.css", 1, self.lien)
 	end

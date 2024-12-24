@@ -1,6 +1,6 @@
 local Base = require("base")
 
-local projets = { "projets/hexattd" , "projets/olagem"}
+local projets = { "projets/luasti", "projets/hexattd" , "projets/olagem"}
 
 local function format_projet(projet, langue)
 	local result = string.format([[
@@ -17,8 +17,11 @@ return {
 	lien = "projets/index.html",
 	content = function(self, langue)
 		local content = ""
-		for _, projet in pairs(projets) do
-			content = content .. format_projet(require(projet), langue)
+		for key, projet in pairs(projets) do
+			content = content .. '<div class="projet_item">' .. format_projet(require(projet), langue) .. '</div>'
+			if (key ~= #projets) then
+				content = content .. "<br><hr>"
+			end
 		end
 		return Base.base(langue, content, "Projets", "../style.css", 1, self.lien)
 	end
