@@ -3,7 +3,7 @@ local footer_format = [[
 		<center>
 			<div id = "footer">
 			<hr>
-			<a id="mel">
+			<a id="courriel" a="YmVuamFtaW4udm9pc2lu" b="QGVucy1yZW5uZXMuZnI">
 				<font color="blue">
 					prenom.nom@ens-rennes.fr
 				</font>
@@ -48,15 +48,16 @@ local base_template = [[
 	</div>
 </body>
 <script>
-  function mail() {
-    let a = "YmVuamFtaW4udm9pc2lu";
-    let b = "QGVucy1yZW5uZXMuZnI";
-    mel = atob(a+b);
-    meldiv = document.getElementById("mel");
-    meldiv.innerHTML = mel;
-    meldiv.href = atob("bWFpbHRvOg==") + mel;
+  function courriel() {
+    let courrieldiv = document.getElementById("courriel");
+    let a = courrieldiv.getAttribute("a");
+    let b = courrieldiv.getAttribute("b");
+    let courriel = atob(a+b);
+	console.log(courriel);
+    courrieldiv.innerHTML = courriel;
+    courrieldiv.href = atob("bWFpbHRvOg==") + courriel;
   }
-  mail();
+  eval(atob("c2V0VGltZW91dCgoKSA9PiBjb3VycmllbCgpLCAxMDAwKQ=="));
 </script>
 </html>
 ]]

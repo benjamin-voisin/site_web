@@ -2,25 +2,25 @@ local Base = require("base")
 
 local para = {
 	fr = [[
-  Vous pouvez me contacter à mon adresse mail suivante : <a id="melcontact" title="to send me an email"> <font color="blue"> prenom.nom@ens-rennes.fr </font> </a>. Ma clé PGP est disponible <a href="../media/public_key.asc" download>ici</a>.
+  Vous pouvez me contacter à mon adresse mail suivante : <a id="melcontact" a="YmVuamFtaW4udm9pc2lu" b="QGVucy1yZW5uZXMuZnI"> <font color="blue"> prenom.nom@ens-rennes.fr </font> </a>. Ma clé PGP est disponible <a href="../media/public_key.asc" download>ici</a>.
 ]],
 	en = [[
-  You can email me at <a id="melcontact" title="to send me an email"> <font color="blue"> firstname.name@ens-rennes.fr </font> </a>. My PGP key is available <a href="../media/public_key.asc" download>here</a>.
+  You can email me at <a id="melcontact" a="YmVuamFtaW4udm9pc2lu" b="QGVucy1yZW5uZXMuZnI"> <font color="blue"> firstname.name@ens-rennes.fr </font> </a>. My PGP key is available <a href="../media/public_key.asc" download>here</a>.
 ]],
 }
 
 local script = [[
-
 <script>
-  function mail() {
-    let a = "YmVuamFtaW4udm9pc2lu";
-    let b = "QGVucy1yZW5uZXMuZnI";
-    mel = atob(a+b);
-    meldiv = document.getElementById("melcontact");
-    meldiv.innerHTML = mel;
-    meldiv.href = atob("bWFpbHRvOg==") + mel;
+  function courrielcontact() {
+    let courrieldiv = document.getElementById("melcontact");
+    let a = courrieldiv.getAttribute("a");
+    let b = courrieldiv.getAttribute("b");
+    let courriel = atob(a+b);
+	console.log(courriel);
+    courrieldiv.innerHTML = courriel;
+    courrieldiv.href = atob("bWFpbHRvOg==") + courriel;
   }
-  mail();
+  eval(atob("c2V0VGltZW91dCgoKSA9PiBjb3VycmllbGNvbnRhY3QoKSwgMTAwMCk="));
 </script>
 ]]
 return {
