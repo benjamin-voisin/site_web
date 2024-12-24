@@ -3,7 +3,7 @@ local footer_format = [[
 		<center>
 			<div id = "footer">
 			<hr>
-			<a id="courriel" a="YmVuamFtaW4udm9pc2lu" b="QGVucy1yZW5uZXMuZnI">
+			<a class="courriel" a="YmVuamFtaW4udm9pc2lu" b="QGVucy1yZW5uZXMuZnI">
 				prenom.nom@ens-rennes.fr
 			</a>
 			<a href="%s/public_key.asc" download>
@@ -46,15 +46,20 @@ local base_template = [[
 	</div>
 </body>
 <script>
-  function courriel() {
-    let courrieldiv = document.getElementById("courriel");
+function remplace_courriel(courrieldiv) {
     let a = courrieldiv.getAttribute("a");
     let b = courrieldiv.getAttribute("b");
     let courriel = atob(a+b);
     courrieldiv.innerHTML = courriel;
     courrieldiv.href = atob("bWFpbHRvOg==") + courriel;
-  }
-  eval(atob("c2V0VGltZW91dCgoKSA9PiBjb3VycmllbCgpLCAxMDAwKQ=="));
+}
+function courriel() {
+    var elements = document.getElementsByClassName("courriel");
+    for(var i = 0; i < elements.length; i++) {
+        remplace_courriel(elements[i]);
+    }
+}
+eval(atob("c2V0VGltZW91dCgoKSA9PiBjb3VycmllbCgpLCAxMjM0KQ=="));
 </script>
 </html>
 ]]
